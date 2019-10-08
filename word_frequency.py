@@ -4,10 +4,26 @@ STOP_WORDS = [
     'will', 'with'
 ]
 
-
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
     pass
+    file = open(file, 'r')
+
+    contents = file.read()
+
+    words = contents.split()
+    print(contents)
+
+
+def clean_text(text):
+    text = text.lower()
+    all_letters = "abcdefghijklmnopqrstuvwxyz"
+    text_to_keep = ""
+    for char in text:
+        if char in all_letters:
+            text_to_keep += char
+    return text_to_keep
+    clean_words = []
 
 
 if __name__ == "__main__":
